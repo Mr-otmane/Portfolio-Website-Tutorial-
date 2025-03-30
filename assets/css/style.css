@@ -318,7 +318,18 @@ h3 {
 }
 
 /* ----- ABOUT / SKILLS BOX ----- */
-
+.skills-box{
+	margin: 10px;
+}
+.skills-header{
+	margin-bottom: 30px;
+}
+.skills-list{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px
+	;
+}
 /* ----- PROJECTS BOX ----- */
 
 /* ----- CONTACT BOX ----- */
