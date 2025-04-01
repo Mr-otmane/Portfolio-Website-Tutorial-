@@ -366,7 +366,8 @@ h3 {
   font-size: 15px;
   color: #777;
 }
-.project-box::after {
+.project-box::after,
+.contact-info::after {
   content: "";
   position: absolute;
   bottom: -100%;
@@ -376,7 +377,8 @@ h3 {
   transition: 0.4s;
   z-index: 1;
 }
-.project-box:hover.project-box::after {
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after {
   bottom: 0;
 }
 .project-box:hover.project-box i,
@@ -400,8 +402,28 @@ h3 {
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
 }
-.contact-info{
-	
+.contact-info > h2 {
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+.contact-info > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-white);
+  margin-block: 5px;
+}
+.contact-info p > i {
+  font-size: 18px;
+}
+.contact-info::after {
+  background: var(--color-white);
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i {
+  color: #777;
+  z-index: 2;
 }
 
 /* ----- CONTACT FORM ----- */
