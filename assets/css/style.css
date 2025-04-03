@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppind", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ----- SMOOTH SCROLL ----- */
@@ -35,7 +35,6 @@ html {
   width: 10px;
   border-radius: 25px;
 }
-
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
@@ -46,9 +45,10 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #bbb;
 }
-/* ---##-- REUSABLE CSS --##--- */
-/* ----- GLOBAL BUTTON DESIGN ----- */
 
+/* ---##-- REUSABLE CSS --##--- */
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
 .btn {
   font-weight: 500;
   padding: 12px 20px;
@@ -65,6 +65,7 @@ html {
   background: var(--second-color);
   color: var(--color-white);
 }
+
 /* ----- GLOBAL ICONS DESIGN ----- */
 i {
   font-size: 16px;
@@ -129,8 +130,24 @@ nav {
   font-size: 28px;
   cursor: pointer;
 }
-/* ----- WRAPPER DESIGN ----- */
+.active-link {
+  position: relative;
+  color: var(--first-color);
+  transition: 0.3;
+}
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: var(--first-color);
+  border-radius: 50%;
+}
 
+/* ----- WRAPPER DESIGN ----- */
 .wrapper {
   padding-inline: 10vw;
 }
@@ -142,6 +159,7 @@ nav {
   height: 100vh;
   min-height: 700px;
 }
+
 /* ----- FEATURED TEXT BOX ----- */
 .featured-text {
   position: relative;
@@ -204,8 +222,8 @@ nav {
 .icon:hover {
   color: var(--first-color);
 }
-/* ----- FEATURED IMAGE BOX ----- */
 
+/* ----- FEATURED IMAGE BOX ----- */
 .featured-image {
   display: flex;
   justify-content: right;
@@ -252,9 +270,10 @@ nav {
 .scroll-btn i {
   font-size: 20px;
 }
+
 /* ----- MAIN BOX ----- */
 .section {
-  padding-block: 5rem;
+  padding-block: 5em;
 }
 .row {
   display: flex;
@@ -336,6 +355,7 @@ h3 {
   padding: 2px 10px;
   border-radius: 5px;
 }
+
 /* ----- PROJECTS BOX ----- */
 .project-container {
   display: flex;
@@ -353,7 +373,7 @@ h3 {
   width: 30%;
   height: 250px;
   background: var(--color-white);
-  border-radius: 20%;
+  border-radius: 20px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
 }
@@ -387,6 +407,7 @@ h3 {
   color: var(--color-white);
   z-index: 2;
 }
+
 /* ----- CONTACT BOX ----- */
 .contact-info {
   position: relative;
@@ -443,8 +464,8 @@ h3 {
   height: 55px;
   background: transparent;
   border: 2px solid #aaa;
-  padding-inline: 20px;
   border-radius: 10px;
+  padding-inline: 20px;
   outline: none;
 }
 textarea {
@@ -517,27 +538,6 @@ footer {
     width: 320px;
     height: 320px;
   }
-  .row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-  }
-  .col {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .about-info,
-  .contact-info {
-    width: 100%;
-  }
-  .project-container {
-    justify-content: center;
-  }
-  .project-box {
-    width: 80%;
-  }
 }
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
@@ -551,11 +551,11 @@ footer {
   .nav-menu {
     position: fixed;
     top: 80px;
-    left: 100%;
+    left: -100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(188, 12, 12, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
     width: 100%;
     min-height: 450px;
@@ -582,6 +582,9 @@ footer {
     align-content: flex-start;
     min-height: 60vh;
   }
+  .social_icons {
+    margin-top: 2em;
+  }
   .featured-image {
     order: 1;
     justify-content: center;
@@ -593,6 +596,27 @@ footer {
   .image img {
     width: 150px;
     height: 150px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-info,
+  .contact-info {
+    width: 100%;
+  }
+  .project-container {
+    justify-content: center;
+  }
+  .project-box {
+    width: 80%;
   }
 }
 
