@@ -31,6 +31,14 @@ window.onscroll = function () {
   }
 };
 /* ----- TYPING EFFECT ----- */
+var typingEffect = new Typed(".typedText", {
+  Strings: ["Designer", "Youtuber" , "Developer"],
+  loop : true,
+  typeSpeed : 100,
+  backSpeed : 80,
+  backDelay : 2000
+
+});
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
 
